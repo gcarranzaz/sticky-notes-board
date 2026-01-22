@@ -7,7 +7,7 @@ export const notesReducer = (state: Note[], action: Action): Note[] => {
         ...state,
         {
           ...action.payload,
-          id: `note-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
+          id: `note-${Date.now()}-${Math.random().toString(36).slice(2, 11)}`,
         },
       ];
     case 'UPDATE_NOTE':
